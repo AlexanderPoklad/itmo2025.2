@@ -1,4 +1,4 @@
-package ru.itmo.javaadvanced.lesson1;
+package ru.itmo.javaadvanced;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
