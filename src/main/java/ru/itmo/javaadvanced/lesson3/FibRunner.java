@@ -1,6 +1,8 @@
 package ru.itmo.javaadvanced.lesson3;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import ru.itmo.javaadvanced.lesson3.service.FibonacciService;
+
 import java.util.Scanner;
 
 @Component

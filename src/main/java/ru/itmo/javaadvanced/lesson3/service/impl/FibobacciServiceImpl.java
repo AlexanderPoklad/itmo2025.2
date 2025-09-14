@@ -1,6 +1,9 @@
-package ru.itmo.javaadvanced.lesson3;
+package ru.itmo.javaadvanced.lesson3.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.itmo.javaadvanced.lesson3.AppConfig;
+import ru.itmo.javaadvanced.lesson3.service.FibonacciService;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
