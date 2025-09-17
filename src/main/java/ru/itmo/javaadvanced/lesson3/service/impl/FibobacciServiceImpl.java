@@ -1,7 +1,7 @@
 package ru.itmo.javaadvanced.lesson3.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.itmo.javaadvanced.lesson3.AppConfig;
+import ru.itmo.javaadvanced.lesson3.AppConfigur;
 import ru.itmo.javaadvanced.lesson3.service.FibonacciService;
 
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequiredArgsConstructor
 public class FibobacciServiceImpl implements FibonacciService {
 
-    private final AppConfig config;
+    private final AppConfigur config;
     private final ConcurrentHashMap<Integer, Long> cache = new ConcurrentHashMap<>();
 
     @Override
