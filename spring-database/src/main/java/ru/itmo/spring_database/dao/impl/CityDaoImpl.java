@@ -1,5 +1,6 @@
 package ru.itmo.spring_database.dao.impl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -9,12 +10,9 @@ import ru.itmo.spring_database.model.City;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class CityDaoImpl implements CityDao {
     private final JdbcTemplate jdbcTemplate;
-
-    public CityDaoImpl(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
 
     private final RowMapper<City> cityRowMapper = (rs, rowNum) ->
             new City(

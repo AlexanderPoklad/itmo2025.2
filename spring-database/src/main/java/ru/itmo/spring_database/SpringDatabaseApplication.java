@@ -3,7 +3,6 @@ package ru.itmo.spring_database;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.itmo.spring_database.dao.CityDao;
 import ru.itmo.spring_database.model.City;
 
@@ -23,25 +22,29 @@ public class SpringDatabaseApplication {
 			int choice = sc.nextInt();
 			sc.nextLine();
 
-			if (choice == 1) {
-				City city = new City();
-				System.out.print("Код города: ");
-				city.setCode(sc.nextLine());
-				System.out.print("Название (RU): ");
-				city.setNameRu(sc.nextLine());
-				System.out.print("Название (EN): ");
-				city.setNameEn(sc.nextLine());
-				System.out.print("Численность: ");
-				city.setPopulation(sc.nextInt());
-				sc.nextLine();
+			switch (choice) {
+				case 1 -> {
+					City city = new City();
+					System.out.print("Код города: ");
+					city.setCode(sc.nextLine());
+					System.out.print("Название (RU): ");
+					city.setNameRu(sc.nextLine());
+					System.out.print("Название (EN): ");
+					city.setNameEn(sc.nextLine());
+					System.out.print("Численность: ");
+					city.setPopulation(sc.nextInt());
+					sc.nextLine();
 
-				dao.save(city);
-				System.out.println("Город добавлен!");
-			} else if (choice == 2) {
-				List<City> cities = dao.findAll();
-				cities.forEach(System.out::println);
-			} else if (choice == 0) {
-				break;
+					dao.save(city);
+					System.out.println("Город добавлен!");
+				}
+				case 2 -> {
+					List<City> cities = dao.findAll();
+					cities.forEach(System.out::println);
+				}
+				case 0 -> {
+					return;
+				}
 			}
 		}
 	}
