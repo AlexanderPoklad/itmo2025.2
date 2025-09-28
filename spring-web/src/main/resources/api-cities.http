@@ -1,0 +1,19 @@
+
+### получить список городов
+GET http://localhost:8080/api/cities
+
+### добавить город
+POST http://localhost:8080/api/cities
+Content-Type: application/json
+
+{
+  "code": "77",
+  "nameRu": "Москва",
+  "nameEn": "Moscow",
+  "population": 12500000,
+  "countryId": 1
+}
+
+
+### удалить город
+DELETE http://localhost:8080/api/cities/1

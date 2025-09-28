@@ -15,3 +15,7 @@ spring:
       ddl-auto: validate
   liquibase:
     enabled: false
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  packages-to-scan: ru.itmo.jpa.controller
