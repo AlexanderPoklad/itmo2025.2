@@ -19,3 +19,6 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
   packages-to-scan: ru.itmo.jpa.controller
+
+  jwt:
+    secret: theSecretLengthMustBeAtLeast256Bits
