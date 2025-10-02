@@ -13,6 +13,7 @@
         <module>spring-database</module>
 		<module>spring-jpa</module>
 		<module>spring-web</module>
+		<module>spring-test</module>
 	</modules>
 
 </project>
